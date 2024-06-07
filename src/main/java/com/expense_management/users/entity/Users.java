@@ -1,5 +1,5 @@
 package com.expense_management.users.entity;
-
+import com.expense_management.category.entity.Category;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -10,6 +10,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,5 +23,8 @@ public class Users {
     private String email;
     private int phone;
     private String password;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Category> categories;
 
 }
