@@ -5,8 +5,6 @@ import com.expense_management.category.entity.Category;
 import com.expense_management.category.mapper.CategoryMapper;
 import com.expense_management.category.repository.CategoryRepository;
 import com.expense_management.category.service.CategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
