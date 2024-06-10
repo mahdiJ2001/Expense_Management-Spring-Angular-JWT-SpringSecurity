@@ -4,6 +4,7 @@ import com.expense_management.budget.mapper.BudgetMapper;
 import com.expense_management.budget.repository.BudgetRepository;
 import com.expense_management.budget.service.BudgetService;
 import com.expense_management.budget.service.impl.BudgetServiceImpl;
+import com.expense_management.category.repository.CategoryRepository;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,7 +17,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan("com.expense_management")
 public class BudgetConfig {
     @Bean
-    public BudgetService budgetService(BudgetRepository budgetRepository, BudgetMapper budgetMapper) {
-        return new BudgetServiceImpl(budgetRepository, budgetMapper);
+    public BudgetService budgetService(BudgetRepository budgetRepository, BudgetMapper budgetMapper , CategoryRepository categoryRepository) {
+        return new BudgetServiceImpl(budgetRepository, budgetMapper ,categoryRepository );
     }
 }

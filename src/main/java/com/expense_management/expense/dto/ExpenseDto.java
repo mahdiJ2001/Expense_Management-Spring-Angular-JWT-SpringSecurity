@@ -13,7 +13,7 @@ import java.util.Date;
 public class ExpenseDto {
     private int id;
     private float amount;
-    private CategoryDto category;
+    private Integer categoryId;
     private Date date;
     private String note;
 }

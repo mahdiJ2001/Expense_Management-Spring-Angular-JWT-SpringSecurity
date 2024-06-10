@@ -12,7 +12,7 @@ import lombok.*;
 public class BudgetDto {
     private int id;
     private float amount;
-    private CategoryDto category;
+    private Integer categoryId;
     private String period;
     private float spentAmount;
 }
