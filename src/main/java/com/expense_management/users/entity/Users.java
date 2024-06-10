@@ -4,6 +4,7 @@ import com.expense_management.category.entity.Category;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 import java.util.Set;
 
 @Table(name="users")
@@ -25,6 +26,6 @@ public class Users {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<Category> categories;
+    private List<Category> categories;
 
 }
