@@ -1,6 +1,5 @@
 package com.expense_management.budget.dto;
 
-import com.expense_management.category.dto.CategoryDto;
 import lombok.*;
 
 @Getter
