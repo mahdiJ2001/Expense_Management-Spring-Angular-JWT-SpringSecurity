@@ -1,4 +1,4 @@
-package com.expense_management.config;
+package com.expense_management.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

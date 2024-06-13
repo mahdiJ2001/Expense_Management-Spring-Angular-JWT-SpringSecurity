@@ -1,4 +1,4 @@
-package com.expense_management.config;
+package com.expense_management.security;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

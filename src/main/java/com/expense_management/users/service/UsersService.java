@@ -13,4 +13,6 @@ public interface UsersService {
     boolean deleteUser(int id);
     UsersDto updateUser(int id, Users user);
     List<UsersDto> getAllUsers();
+    boolean emailExists(String email);
+
 }

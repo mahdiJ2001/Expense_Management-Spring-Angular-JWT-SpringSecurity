@@ -1,4 +1,4 @@
-package com.expense_management.config;
+package com.expense_management.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

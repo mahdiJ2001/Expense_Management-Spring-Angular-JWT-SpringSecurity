@@ -1,4 +1,4 @@
-package com.expense_management.config;
+package com.expense_management.security;
 
 import com.expense_management.users.entity.Users;
 import com.expense_management.users.repository.UsersRepository;
