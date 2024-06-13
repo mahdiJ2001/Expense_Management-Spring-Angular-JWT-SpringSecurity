@@ -6,6 +6,7 @@ import com.expense_management.users.mapper.UsersMapper;
 import com.expense_management.users.repository.UsersRepository;
 import com.expense_management.users.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;
 import java.util.List;
@@ -29,11 +30,6 @@ public class UserServiceImpl implements UsersService {
         return userOptional.map(usersMapper::toDto);
     }
 
-    @Override
-    public UsersDto saveUser(Users user) {
-        Users savedUser = usersRepository.save(user);
-        return usersMapper.toDto(savedUser);
-    }
 
     @Override
     public boolean deleteUser(int id) {
@@ -58,4 +54,20 @@ public class UserServiceImpl implements UsersService {
         List<Users> users = usersRepository.findAll();
         return usersMapper.toDtoList(users);
     }
+
+    @Override
+    public boolean emailExists(String email) {
+        return usersRepository.findByEmail(email).isPresent();
+    }
+
+    @Override
+    public UsersDto saveUser(Users user) {
+        Optional<Users> existingUser = usersRepository.findByEmail(user.getEmail());
+        if (existingUser.isPresent()) {
+            throw new IllegalArgumentException("User with this email already exists");
+        }
+        Users savedUser = usersRepository.save(user);
+        return usersMapper.toDto(savedUser);
+    }
+
 }
