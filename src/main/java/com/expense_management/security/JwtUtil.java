@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Component
-public class JwtUtil {//generates , builds and validates tokens
+public class JwtUtil {
 
     private final String SECRET_KEY = "your-secure-key-that-is-at-least-32-bytes-long";
     private final Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());

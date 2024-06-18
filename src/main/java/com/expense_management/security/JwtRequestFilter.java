@@ -14,7 +14,7 @@ import java.io.IOException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 @Component
-public class JwtRequestFilter extends OncePerRequestFilter {//y intercepti request w ye5ou menha token mel header w yvalidi token
+public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Autowired
     private CustomUserDetailsService userDetailsService;
