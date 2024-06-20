@@ -1,6 +1,7 @@
 package com.expense_management.expense.entity;
 
 import com.expense_management.category.entity.Category;
+import com.expense_management.report.entity.Report;
 import com.expense_management.users.entity.Users;
 import lombok.*;
 
@@ -34,4 +35,8 @@ public class Expense {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private Users user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "report_id")
+    private Report report;
 }
