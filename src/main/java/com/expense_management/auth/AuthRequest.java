@@ -1,4 +1,4 @@
-package com.expense_management.auth.dto;
+package com.expense_management.auth;
 
 import lombok.*;
 
