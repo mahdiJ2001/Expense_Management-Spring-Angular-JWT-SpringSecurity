@@ -61,4 +61,9 @@ public class ExpenseServiceImpl implements ExpenseService {
                 .map(expenseMapper::toDto)
                 .collect(Collectors.toList());
     }
+
+    public List<Expense> getExpensesByUserId(int userId) {
+        return expenseRepository.findByUserId(userId);
+    }
+
 }

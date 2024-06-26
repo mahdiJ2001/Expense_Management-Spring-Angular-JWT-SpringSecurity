@@ -6,6 +6,7 @@ import com.expense_management.users.entity.Users;
 
 import java.util.Optional;
 import java.util.List;
+
 @Service
 public interface UsersService {
     Optional<UsersDto> getUserById(int id);
