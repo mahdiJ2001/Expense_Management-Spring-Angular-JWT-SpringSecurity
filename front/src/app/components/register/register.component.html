@@ -1,0 +1,55 @@
+<form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+  <div style="margin-bottom: 15px;">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" formControlName="firstName" required>
+    <div *ngIf="f['firstName'].invalid && (f['firstName'].dirty || f['firstName'].touched)">
+      <div *ngIf="f['firstName'].errors?.['required']">First Name is required.</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" formControlName="lastName" required>
+    <div *ngIf="f['lastName'].invalid && (f['lastName'].dirty || f['lastName'].touched)">
+      <div *ngIf="f['lastName'].errors?.['required']">Last Name is required.</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+    <div *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)">
+      <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+      <div *ngIf="f['email'].errors?.['email']">Invalid email format.</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" formControlName="phone" required>
+    <div *ngIf="f['phone'].invalid && (f['phone'].dirty || f['phone'].touched)">
+      <div *ngIf="f['phone'].errors?.['required']">Phone is required.</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" required>
+    <div *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)">
+      <div *ngIf="f['password'].errors?.['required']">Password is required.</div>
+      <div *ngIf="f['password'].errors?.['minlength']">Password must be at least 6 characters.</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label for="role">Role:</label>
+    <select id="role" formControlName="role">
+      <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+    </select>
+    <div *ngIf="f['role'].invalid && (f['role'].dirty || f['role'].touched)">
+      <div *ngIf="f['role'].errors?.['required']">Role is required.</div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+</form>
