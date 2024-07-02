@@ -39,6 +39,5 @@ testem.log
 Thumbs.db
 
 # Custom additions
-/package-lock.json
-/.vscode/
-
+package-lock.json
+.vscode/
