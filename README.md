@@ -28,7 +28,6 @@ The **Expense Management App** is a comprehensive solution designed to help user
 
 ### Dashboard
 
-![Dashboard 1](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/assets/DASH1.png)
 ![Dashboard 2](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/assets/DASH2.png)
 ![Dashboard 3](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/assets/DASH3.png)
 ![Dashboard 4](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/Pie1.png)
