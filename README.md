@@ -1,28 +1,6 @@
 # Expense Management App
 
-## Overview
-
-The **Expense Management App** is a comprehensive solution designed to help users effectively manage their finances. It offers features for tracking incomes and expenses, visualizing financial data with interactive charts, generating detailed PDF reports, and bulk uploading data from Excel files.
-
-## Features
-
-- **Income and Expense Tracking:** Add, view, and manage income and expense records.
-- **Data Visualization:** Interactive charts for daily, weekly, and monthly financial data using Chart.js.
-- **PDF Reports:** Generate detailed PDF reports for incomes and expenses using Jasper Studio.
-- **Bulk Upload:** Upload bulk expenses or incomes from Excel files using Apache POI.
-- **Authentication and Security:** Secure the application with JWT and Spring Security.
-- **Modular Design:** Follow best practices with a modular architecture, including entities, DTOs, controllers, services, implementations, mappers, and repositories.
-
-## Technologies and Tools
-
-- **Backend:** Spring Framework
-- **Frontend:** Angular
-- **Charts:** Chart.js
-- **UI Components:** Angular Material
-- **Report Generation:** Jasper Studio
-- **Excel File Handling:** Apache POI
-- **Database:** PostgreSQL
-- **Authentication:** JWT (JSON Web Tokens) and Spring Security
+I built this application to practice designing a complete personal finance system that goes beyond simple CRUD by adding visualization, reporting, and bulk data handling. It allows users to track incomes and expenses, visualize financial data through charts, upload records from Excel files, and generate PDF reports. The app is implemented using Spring on the backend and Angular on the frontend, with PostgreSQL for storage, Chart.js and Angular Material for the UI, Jasper Studio for report generation, Apache POI for Excel processing, and JWT with Spring Security for authentication.
 
 ## Screenshots
 
@@ -32,7 +10,6 @@ The **Expense Management App** is a comprehensive solution designed to help user
 ![Dashboard 3](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/assets/DASH3.png)
 ![Dashboard 4](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/Pie1.png)
 ![Dashboard 5](https://github.com/mahdiJ2001/Expense_Management_App/blob/master/Pie2.png)
-
 
 ### User Interface
 
